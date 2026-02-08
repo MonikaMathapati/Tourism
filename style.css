@@ -1,0 +1,194 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;   /*makes it circular*/
+    object-fit: cover;
+    /* width:45%;
+    height: 250px; */
+}
+.container .header nav{
+    display: flex;
+    /* width: 100%; */
+    height: 150px;
+    /* border: 2px solid goldenrod; */
+    /* background-color: bisque; */
+    background-color: rgb(234, 255, 255);
+}
+nav li{
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    /* padding: 2px; */
+    /* height: 30px;
+    width: 45px; */
+    /* background-color: blueviolet; */
+}
+nav li i{
+    margin-top: 15px;
+    font-size: 70px;
+}
+/* i{
+    height: 5px;
+    width: 5px;
+} */
+nav li a{
+    font-size: 50px;
+    text-decoration:underline;
+}
+nav li a:hover{
+    color: turquoise;
+    font-family: cursive;
+}
+
+/* CSS FOR SUPPORT PAGE */
+.faq-container {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.faq-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background: azure;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+/* Remove default arrow */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-box p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Rotate arrow on open */
+.faq-box[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+
+/* CSS --About page */
+.aboutdata{
+    margin: 20px 20px;
+    padding: 40px;
+    background-color:azure;
+
+}
+
+/* CSS for tips page */
+.tips{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    max-width: 900px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    background:azure;
+    line-height: 1.6;
+}
+.outer {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.tip h2{
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline solid cyan;
+}
+
+/* CSS for home page */
+.home{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;  /* horizontal center */
+    align-items: center; 
+}
+.home h2{
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+    text-decoration:underline violet;
+}
+.card-container {
+    margin-top:25px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    background: #fff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid rgb(30, 188, 188);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* CSS for contact page */
+.help{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    max-width: 900px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    background:azure;
+    line-height: 1.6;
+}
+.contact{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.help dt {
+  font-weight: 600;
+}
+.help ul li :hover{
+    color:violet;
+    font-family: cursive;
+}
