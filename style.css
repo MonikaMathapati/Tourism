@@ -1,53 +1,54 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
-img{
 
+/* Images */
+img{
     width: 150px;
     height: 150px;
-    border-radius: 50%;   /*makes it circular*/
+    border-radius: 50%;
     object-fit: cover;
-    /* width:45%;
-    height: 250px; */
+    max-width: 100%;
 }
+
+/* NAVBAR */
 .container .header nav{
     display: flex;
-    /* width: 100%; */
-    height: 150px;
-    /* border: 2px solid goldenrod; */
-    /* background-color: bisque; */
+    min-height: 100px; 
     background-color: rgb(234, 255, 255);
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
+
 nav li{
     align-items: center;
     text-align: center;
     list-style: none;
-    /* padding: 2px; */
-    /* height: 30px;
-    width: 45px; */
-    /* background-color: blueviolet; */
 }
+
 nav li i{
-    margin-top: 15px;
-    font-size: 70px;
+    margin-top: 10px;
+    font-size: 50px; 
 }
-/* i{
-    height: 5px;
-    width: 5px;
-} */
+
 nav li a{
-    font-size: 50px;
-    text-decoration:underline;
+    font-size: 40px; 
+    text-decoration: underline;
 }
+
 nav li a:hover{
     color: turquoise;
     font-family: cursive;
 }
 
-/* CSS FOR SUPPORT PAGE */
+/* SUPPORT PAGE */
 .faq-container {
   max-width: 700px;
   margin: 40px auto;
+  padding: 0 15px;
 }
 
 .faq-box {
@@ -67,7 +68,6 @@ summary {
   list-style: none;
 }
 
-/* Remove default arrow */
 summary::-webkit-details-marker {
   display: none;
 }
@@ -77,7 +77,6 @@ summary::-webkit-details-marker {
   line-height: 1.6;
 }
 
-/* Rotate arrow on open */
 .faq-box[open] .arrow {
   transform: rotate(180deg);
 }
@@ -86,16 +85,14 @@ summary::-webkit-details-marker {
   transition: transform 0.3s ease;
 }
 
-
-/* CSS --About page */
+/* ABOUT PAGE */
 .aboutdata{
-    margin: 20px 20px;
+    margin: 20px;
     padding: 40px;
-    background-color:azure;
-
+    background-color: azure;
 }
 
-/* CSS for tips page */
+/* TIPS PAGE */
 .tips{
     display: flex;
     justify-content: center;
@@ -104,43 +101,47 @@ summary::-webkit-details-marker {
     padding: 10px;
     border: 2px solid #ddd;
     border-radius: 16px;
-    background:azure;
+    background: azure;
     line-height: 1.6;
 }
+
 .outer {
   min-height: 10vh;
   display: flex;
   justify-content: center;
   padding-top: 5px;
 }
+
 .tip h2{
-    justify-content: center;
     text-align: center;
     text-decoration: underline solid cyan;
 }
 
-/* CSS for home page */
+/* HOME PAGE */
 .home{
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;  /* horizontal center */
-    align-items: center; 
+    align-items: center;
+    margin-top: 20px; 
 }
+
 .home h2{
     font-size: 40px;
-    position: relative;
-    top: 10px;
-    text-decoration:underline violet;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline violet;
 }
+
 .card-container {
-    margin-top:25px;
+    margin-top: 25px;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .card {
     background: #fff;
     width: 280px;
@@ -167,7 +168,7 @@ summary::-webkit-details-marker {
     color: #555;
 }
 
-/* CSS for contact page */
+/* CONTACT PAGE */
 .help{
     display: flex;
     justify-content: center;
@@ -176,19 +177,78 @@ summary::-webkit-details-marker {
     padding: 10px;
     border: 2px solid #ddd;
     border-radius: 16px;
-    background:azure;
+    background: azure;
     line-height: 1.6;
 }
+
 .contact{
   min-height: 10vh;
   display: flex;
   justify-content: center;
   padding-top: 5px;
 }
+
 .help dt {
   font-weight: 600;
 }
-.help ul li :hover{
-    color:violet;
+
+.help ul li:hover{
+    color: violet;
     font-family: cursive;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .container .header nav{
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav li i{
+        font-size: 35px;
+    }
+
+    nav li a{
+        font-size: 20px;
+    }
+
+    /* Home */
+    .home h2{
+        font-size: 24px;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .card-container{
+        gap: 15px;
+    }
+
+    /* Tips */
+    .tips{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* Contact */
+    .help{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* About */
+    .aboutdata{
+        padding: 20px;
+    }
+
+    /* Images */
+    img{
+        width: 100px;
+        height: 100px;
+    }
 }
